@@ -32,6 +32,10 @@ SNOWFLAKE_USER=<your-username>
 SNOWFLAKE_PASSWORD=<your-password>
 SNOWFLAKE_WAREHOUSE=<your-warehouse>
 SNOWFLAKE_ROLE=<your-role>
+
+# Optional: comma-separated list of database names to extract.
+# When omitted, all databases visible to the role are extracted.
+# DATABASES=DB_ONE,DB_TWO,DB_THREE
 ```
 
 **Finding your account identifier:** In Snowsight, go to **Admin → Accounts** and copy the account identifier (format: `orgname-accountname`). Do not include the `.snowflakecomputing.com` suffix.

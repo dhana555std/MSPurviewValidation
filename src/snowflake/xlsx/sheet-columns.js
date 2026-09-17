@@ -11,8 +11,8 @@ const DATABASE_COLUMNS = [
 ];
 
 const SCHEMA_COLUMNS = [
-  { header: "Name", key: "name", width: 30 },
   { header: "Database", key: "databaseName", width: 25 },
+  { header: "Name", key: "name", width: 30 },
   { header: "Description", key: "description", width: 40 },
   { header: "Owner", key: "owner", width: 20 },
   { header: "Is Default", key: "isDefault", width: 12 },
@@ -23,9 +23,9 @@ const SCHEMA_COLUMNS = [
 ];
 
 const TABLE_COLUMNS = [
-  { header: "Name", key: "name", width: 30 },
   { header: "Database", key: "databaseName", width: 25 },
   { header: "Schema", key: "schemaName", width: 25 },
+  { header: "Name", key: "name", width: 30 },
   { header: "Description", key: "description", width: 40 },
   { header: "Kind", key: "kind", width: 15 },
   { header: "Owner", key: "owner", width: 20 },

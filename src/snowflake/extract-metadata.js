@@ -36,9 +36,25 @@ export const extractMetadata = async () => {
 
   console.log("\nRetrieving databases...");
 
-  const databases = await getDatabases();
+  const allDatabases = await getDatabases();
 
-  console.log(`Found ${databases.length} databases.`);
+  const databaseFilter = process.env.DATABASES
+    ? new Set(
+        process.env.DATABASES.split(",").map((name) => name.trim().toUpperCase()),
+      )
+    : null;
+
+  const databases = databaseFilter
+    ? allDatabases.filter((db) => databaseFilter.has(db.name.toUpperCase()))
+    : allDatabases;
+
+  if (databaseFilter) {
+    console.log(
+      `Filtering to ${databases.length} of ${allDatabases.length} databases (DATABASES env var).`,
+    );
+  } else {
+    console.log(`Found ${databases.length} databases.`);
+  }
 
   const accountName = process.env.SNOWFLAKE_ACCOUNT || "UNKNOWN";
 
