@@ -4,3 +4,5 @@ snowflake-metadata.json
 snowflake-logs/
 .claude
 snowflake-metadata-output
+.DS_Store
+**/.DS_Store
