@@ -1,0 +1,6 @@
+.env
+node_modules
+snowflake-metadata.json
+snowflake-logs/
+.claude
+snowflake-metadata-output
